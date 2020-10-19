@@ -3,4 +3,5 @@ type Person {
   firstName: String!
   lastName: String!
   fullName: String!
+  dateOfBirth: Date
 }

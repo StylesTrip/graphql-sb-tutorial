@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.time.LocalDate;
 
 @Service
 public class PersonService {
@@ -15,8 +16,8 @@ public class PersonService {
    public PersonService() {
    }
 
-   public Person createPerson(final String firstName, final String lastName) {
-       final Person person = new Person(++INDEX_COUNTER, firstName, lastName);
+   public Person createPerson(final String firstName, final String lastName, LocalDate dateOfBirth) {
+       final Person person = new Person(++INDEX_COUNTER, firstName, lastName, dateOfBirth);
        people.add(person);
        return person;
    }

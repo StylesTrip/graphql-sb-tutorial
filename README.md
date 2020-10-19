@@ -18,11 +18,12 @@ query {
 To create a person
 ```
 mutation {
-    createPerson(firstName: "John", lastName: "Doe") {
-        id
-        firstName
-        lastName
-    }
+  createPerson(firstName: "John", lastName: "Doe", dateOfBirth: "1900-01-02") {
+      id
+      firstName
+      lastName
+      dateOfBirth
+  }
  }
 ```
 
@@ -34,6 +35,7 @@ query {
     firstName
     lastName
     fullName
+    dateOfBirth
   }
 }
 ```
